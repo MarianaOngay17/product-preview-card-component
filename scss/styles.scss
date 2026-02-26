@@ -1,0 +1,127 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+body{
+    background-color: v.$cream;
+    margin-top: 2.5rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    flex-direction: column; 
+}
+
+.card{
+    background-color: v.$white;
+    overflow: hidden;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+
+    @include m.desktop {
+        display: flex;
+        flex-direction: row;
+        height: 28rem;
+        width: 36rem;
+    }
+    
+    &__image{
+        width: 100%;
+        display: block;
+
+        @include m.desktop {
+            content: url('../images/image-product-desktop.jpg');
+            width: 18rem;
+        }
+    }
+
+    &__content {
+        padding: 1.5rem;
+    }
+
+    &__product{
+        font-family: v.$fuente_secundaria;
+        color: v.$grey;
+        font-weight: v.$regular;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        letter-spacing: 0.4rem;
+    }
+
+    &__title{
+        font-family: v.$fuente_principal;
+        color: v.$black;
+        font-size: 2rem;
+        font-weight: v.$bold;
+        margin: 1.5rem 0 1.5rem 0;
+    }
+
+    &__description{
+        font-family: v.$fuente_secundaria;
+        color: v.$grey;
+        font-weight: v.$regular;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    &__price-section{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__price{
+        font-family: v.$fuente_principal;
+        color: v.$green500;
+        font-weight: v.$bold;
+        font-size: 2rem;
+    }
+
+    &__price-old{
+        font-family: v.$fuente_secundaria;
+        color: v.$grey;
+        font-size: 0.8rem;
+        font-weight: v.$regular;
+        text-decoration: line-through;
+    }
+
+    &__button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 1rem 0 2rem 0;
+        background-color: v.$green500;
+        padding: 1rem;
+        border-radius: 0.4rem;
+        color: v.$white;
+        font-family: v.$fuente_secundaria;
+        font-weight: v.$bold;
+        font-size: 1rem;
+
+        &:hover{
+            background-color: v.$green700;
+            cursor: pointer;
+        }
+    }
+}
+
+.attribution{
+    margin-bottom: 0;
+    text-align: center;
+    font-family: v.$fuente_secundaria;
+    font-size: 0.8rem;
+    color: v.$grey;
+
+    a {
+        color: v.$green700;
+    }
+    
+    @include m.desktop{
+        margin-top: 1rem;
+    }
+    
+}

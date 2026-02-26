@@ -1,0 +1,117 @@
+body {
+  background-color: hsl(30, 38%, 92%);
+  margin-top: 2.5rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  overflow: hidden;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+}
+@media (min-width: 375px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    height: 28rem;
+    width: 36rem;
+  }
+}
+.card__image {
+  width: 100%;
+  display: block;
+}
+@media (min-width: 375px) {
+  .card__image {
+    content: url("../images/image-product-desktop.jpg");
+    width: 18rem;
+  }
+}
+.card__content {
+  padding: 1.5rem;
+}
+.card__product {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.4rem;
+}
+.card__title {
+  font-family: "Fraunces", sans-serif;
+  color: hsl(212, 21%, 14%);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.5rem 0 1.5rem 0;
+}
+.card__description {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.card__price-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.card__price {
+  font-family: "Fraunces", sans-serif;
+  color: hsl(158, 36%, 37%);
+  font-weight: 700;
+  font-size: 2rem;
+}
+.card__price-old {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+.card__button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0 2rem 0;
+  background-color: hsl(158, 36%, 37%);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  color: hsl(0, 0%, 100%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.card__button:hover {
+  background-color: hsl(158, 42%, 18%);
+  cursor: pointer;
+}
+
+.attribution {
+  margin-bottom: 0;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  color: hsl(228, 12%, 48%);
+}
+.attribution a {
+  color: hsl(158, 42%, 18%);
+}
+@media (min-width: 375px) {
+  .attribution {
+    margin-top: 1rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

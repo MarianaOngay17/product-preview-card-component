@@ -1,0 +1,8 @@
+@use 'variables' as v;
+@use 'sass:color';
+
+@mixin desktop {
+    @media (min-width: v.$telefono) {
+        @content;
+    }
+}
